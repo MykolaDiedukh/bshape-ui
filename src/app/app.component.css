@@ -1,0 +1,1030 @@
+/* You can add global styles to this file, and also import other style files */
+/*============= ukrycie navbara działa póki co na chromie
+https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll
+=============*/
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+
+/*============= RESETS =============*/
+
+/*-- cholerne iPhone z okrągłymi ekranami poprawa wyświetlenia --*/
+html {
+  padding: env(safe-area-inset);
+}
+
+/*-- Prevent Horizontal Scrolling & Font Style --*/
+
+
+html, body, footer, main {
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif; /* nasz font z googla możemy dodać */
+  color: #505962; /*zmienić kolor elementów podzielić część na body a część na mian itp żeby był rozdzielny color*/
+  scrollbar-width: none;
+}
+
+/*-- Wyróżnienia kolorów w sekcjach  --*/
+.text-color-mark {
+  color: #5cb85c;
+}
+
+
+
+/*--- Nav Scrolling Offset --*/
+/*poprawna nawigacja do innych elementów*/
+.offset:before {
+  content: "";
+  height: 4rem;
+  display: block;
+  margin-top: -4rem;
+}
+
+/*--- Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+  padding: 1rem;
+}
+
+/*============= NAVIGATION =============*/
+.bshapeicon {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.container-fluid a {
+  text-decoration: none;
+}
+
+.navbar {
+  padding: .7rem 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  font-size: .9rem;
+  transition: background-color .5s ease;
+}
+
+.navbar-nav li {
+  padding-right: .8rem;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  padding-top: .8rem;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: #5cb85c;
+}
+
+.custom-toggler-icon {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.navbar.solid,
+.navbar.solid-toggle {
+  background: rgba(0, 0, 0, .7);
+  transition: background-color 1s ease;
+}
+
+
+/*-- przycisk usunięcie lini --*/
+button:focus, a:focus, a.btn:focus {
+  outline: 0;
+  -webkit-appearance: none;
+  box-shadow: none;
+  transition: all .6s ease;
+
+}
+
+button, a, a.btn,
+.svg-inline--fa {
+  transition: all .6s ease;
+}
+
+/*============= VIDEO LANDING PAGE =============*/
+
+/*--- Fixed Video Background--*/
+.video-background {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1); /* Black Opacity On Video */
+}
+
+.video-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#video {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  z-index: -1000;
+}
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  /*background: url('') no-repeat;*/
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+
+/*============= LANDING PAGE =============*/
+
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: table;
+  z-index: -1;
+}
+
+.home-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/*.home-inner {
+    background-image: url('../img/jpgforbody/balancing-act-2983129_1920-HD.jpg');
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    !*problem z ios*!
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+    display: table;
+}*/
+
+.home-boxes {
+  padding: 5em 0;
+}
+
+.home-box i {
+  font-size: 4rem;
+
+}
+
+.home-box h3 {
+  font-size: 2.6rem;
+}
+
+/*-- Landing Page animacja --*/
+
+.caption {
+  z-index: 1;
+  position: absolute;
+  top: 38%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.caption h1 {
+  font-size: 4.5rem;
+  letter-spacing: .3rem;
+  text-shadow: .1rem .1rem .8rem black;
+  padding-bottom: 1rem;
+}
+
+.caption h3 {
+  font-size: 2.5rem;
+  text-shadow: .1rem .1rem .5rem black;
+  padding-bottom: 2rem;
+}
+
+.caption .btn-lg {
+  border-width: medium;
+  padding: .8rem 1.5rem;
+  font-size: 1.1rem;
+}
+
+
+/*-- Bouncing Down Arrow --*/
+.arrow {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+}
+
+.down-arrow .svg-inline--fa {
+  font-size: 2.2rem;
+  opacity: .4;
+}
+
+.buncingarrow {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.buncingarrow:hover {
+  color: #55bb1e;
+}
+
+/*.down-arrow .svg-inline--fa:hover {
+    opacity: .8;
+}*/
+
+.down-arrow i {
+  font-size: 2.2rem;
+}
+
+/*============= AboutUS SECTION =============*/
+
+.btn-sm {
+  border-width: medium;
+  border-radius: 4rem;
+  padding: .5rem 1.1rem;
+  text-transform: uppercase;
+  font-size: .9rem;
+  margin: 1rem;
+}
+
+.btn-features {
+  background-color: #55bb1e;
+  color: white;
+}
+
+.btn-features:hover {
+  background-color: #42aa21;
+  color: white;
+}
+
+.jumbotron h1 {
+  font-weight: 900;
+}
+
+h3.heading {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.9rem;
+  text-align: center;
+  margin-bottom: 1.9rem;
+}
+
+span.heading{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.9rem;
+}
+
+.rowiconsfeature i{
+  font-size: 2.9rem;
+  /* margin-top: 5rem;*/
+}
+
+.forfeaturers {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+/*.heading-underline {
+    width: 3rem;
+    height: .2rem;
+    background-color: #bb1e1e;
+    margin: 0 auto 2rem;
+}*/
+
+.features-bottom-padding{
+  padding-bottom: 6rem;
+}
+
+.features-top-padding{
+  padding-top: 2rem;
+  font-size: 2.3rem;
+
+}
+
+.features-icon-padding{
+  padding-top: 3rem;
+}
+
+.features-bshapeicon-styling{
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.aboutUsparagraf{
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-weight: 600;
+
+}
+
+.huge-icons i{
+  font-size: 3rem;
+
+}
+
+
+/*===== FIXED BACKGROUND IMG DARK =====*/
+
+/*--- iOS Fixed Background Image --*/
+.fixed {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+}
+
+.features-font-icons {
+  background-image: url('../assets/img/ABOUTUS/pexels-pixabay-355321-HD.jpg');
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: table;
+}
+
+.dark {
+  background-color: rgba(5, 0, 0, 0.7);
+  padding: 7rem 0;
+  z-index: 1000;
+}
+
+.text-bgdark p{
+  font-weight: 400;
+}
+
+/*============= PRICING SECTION =============*/
+
+.pricing-column {
+  background-color: white;
+  height: 100%;
+  padding: 1.6rem;
+  border-top: .25rem solid #55bb1e;
+  box-shadow: 0 0 .8rem rgba(0, 0, 0, .075);
+  transition: transform .7s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-column:hover {
+  transform: scale(1.1);
+}
+
+.pricing-column h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.ribbon {
+  background-color: #6c757d;
+  color: white;
+  font-size: .8rem;
+  font-weight: 700;
+  height: 2rem;
+  width: 10rem;
+  padding-top: .4rem;
+  position: absolute;
+  transform: rotate(45deg);
+  right: -2.8rem;
+  top: 1.5rem;
+  box-shadow: 0 0 .2rem rgba(0, 0, 0, .25);
+}
+
+.ribbon-pro {
+  background-color: goldenrod;
+  color: white;
+  font-size: .8rem;
+  font-weight: 700;
+  height: 2rem;
+  width: 10rem;
+  padding-top: .4rem;
+  position: absolute;
+  transform: rotate(45deg);
+  right: -2.8rem;
+  top: 1.5rem;
+  box-shadow: 0 0 .2rem rgba(0, 0, 0, .25);
+}
+
+.pricingclass {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.9rem;
+  text-align: center;
+  margin-bottom: 1.9rem;
+  color: white;
+}
+
+.pricing-column .goldenshow{
+  color: goldenrod;
+}
+
+.richbutton{
+  color: white;
+  background-color: goldenrod;
+}
+
+.richbutton:hover{
+  color: white;
+  background-color: #ba9227;
+}
+
+.greenshow{
+  color: #5cb85c;
+}
+
+
+/*
+LOGIN I REGISTER
+*/
+.form-control {
+  background-color: #ffffff;
+  border-radius: 0;
+  border: .15rem solid #5cb85c;
+  font-size: 1.1rem;
+}
+
+.input-group-append .input-group-text i {
+  font-size: 1rem;
+}
+
+
+.modal-content {
+  background-color: rgba(0, 0, 0, .7);
+  border-color: #5cb85c;
+
+
+}
+
+.input-group > .input-group-prepend {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
+
+.input-group .input-group-text {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.input-group-append .fa .fa-eye i {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
+
+.modal-header {
+  color: white;
+}
+
+.btn-features-login {
+  background-color: #55bb1e;
+  color: white;
+}
+
+.btn-features-login:hover {
+  background-color: #35871b;
+  color: white;
+}
+
+.btn-features-register {
+  background-color: #55bb1e;
+  color: white;
+}
+
+.modal-footer .btn-features-register:hover {
+  background-color: #35871b;
+  color: white;
+}
+
+.custom-select {
+  border-color: #55bb1e;
+  border-width: 0.1rem;
+  font-weight: 600;
+}
+
+.form-control {
+  font-weight: 600;
+  color: #292b2c;
+}
+
+.close span {
+  color: white;
+}
+
+.close span:hover {
+  color: white;
+  display: inline-block;
+}
+
+.closebutton {
+  /*background-color: #ff595e;*/
+  background-color: #a82e19;
+  color: white;
+}
+
+.closebutton:hover {
+  /*background-color: #c14546;*/
+  background-color: #8e220d;
+  color: white;
+}
+
+
+/*===== Novelties Section =====*/
+
+.novelties-img-box{
+  position: relative;
+  height: 250px;
+  background-size: cover;
+  z-index: 0;
+
+}
+
+.novelties-img-box p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.novelties-more-space-up{
+  padding-top: -4rem;
+}
+
+/*
+ZDJĘCIA ZACHOWANIE NA MOBILKACH + KLIKNIECIE OBOK = ZWINIĘCIE
+ */
+
+.box-first{
+  background-image: url("../assets/img/NoveltiesSection/pexels-foodie-factor-566566-mobile-edited.jpg");
+}
+.box-second{
+  background-image: url("../assets/img/NoveltiesSection/pexels-malidate-van-769289.jpg");
+}
+.box-third{
+  background-image: url("../assets/img/NoveltiesSection/asparagus-2169305_1280.jpg");
+}
+.box-fourth{
+  background-image: url("../assets/img/NoveltiesSection/pexels-marta-dzedyshko-2067422.jpg");
+}
+
+.novelties-roll .card-header{
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.novelties-roll h3{
+  font-weight: bold;
+  color: #55bb1e;
+}
+
+.card-body p{
+  font-weight: 700;
+}
+
+.novelties-roll .btn{
+  font-size: 1.6rem;
+}
+
+.card-novelties:hover{
+  transform: scale(1.1);
+  background-color: white;
+  height: 100%;
+  padding: 1.6rem;
+  border-top: .25rem solid #55bb1e;
+  box-shadow: 0 0 .8rem rgba(0, 0, 0, .075);
+  transition: transform .7s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-novelties{
+  background-color: white;
+  height: 100%;
+  padding: 1.6rem;
+  border-top: .25rem solid #55bb1e;
+  box-shadow: 0 0 .8rem rgba(0, 0, 0, .075);
+  transition: transform .7s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ribbon-pro-novelties{
+  background-color: goldenrod;
+  color: white;
+  font-size: .8rem;
+  font-weight: 700;
+  height: 2rem;
+  width: 10rem;
+  padding-top: .4rem;
+  position: absolute;
+  transform: rotate(45deg);
+  text-align: center;
+  padding-right: 1.3rem;
+  right: -2.8rem;
+  top: 1.9rem;
+  box-shadow: 0 0 .2rem rgba(0, 0, 0, .25);
+}
+
+.ribbon-pro-novelties-hot{
+  background-color: #1EBBA3;
+  color: white;
+  font-size: .8rem;
+  font-weight: 700;
+  height: 2rem;
+  width: 10rem;
+  padding-top: .4rem;
+  position: absolute;
+  transform: rotate(45deg);
+  text-align: center;
+  padding-right: 1.3rem;
+  right: -2.8rem;
+  top: 1.9rem;
+  box-shadow: 0 0 .2rem rgba(0, 0, 0, .25);
+}
+
+.card-novelties .novelties-first-paraf {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+
+.card-footer .btn:hover{
+  background-color: #3e9218;
+}
+
+.card-footer .btn{
+  color: white;
+  background-color: #55bb1e;
+}
+
+.novelties-more-space{
+  padding-bottom: 3rem;
+}
+
+.btn-novelities{
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+
+/*============= CONTACT SECTION =============*/
+
+.footer {
+  background: url('../assets/img/CONTACT/pexels-splitshire-1526.jpg') no-repeat;
+  background-size: cover;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.23);
+}
+
+.row.outer {
+  background-color: rgba(0, 0, 0, .75);
+  padding: 1rem 2rem 3rem;
+}
+
+.footer img {
+  height: 2rem;
+  margin: 1.5rem 0;
+}
+
+.footer a,
+.footer ul.social li a {
+  color: white;
+}
+
+.footer ul.social li a:hover {
+  color: #55bb1e;
+}
+
+.footer h3 {
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+
+.pthanks {
+  font-weight: 900;
+  color: #55bb1e;
+  padding-top: 1rem;
+  padding-right: 2rem;
+
+}
+
+.plocation {
+  font-weight: 900;
+  color: #55bb1e;
+  padding-top: 1rem;
+  padding-right: 2rem;
+
+}
+
+.pcontact {
+  font-weight: 900;
+  color: #55bb1e;
+  padding-top: 1rem;
+  padding-right: 2rem;
+}
+
+.writetome ul {
+  font-size: 2rem;
+
+}
+
+.writetome a {
+}
+
+.messagecolor :hover {
+  background-color: white;
+  color: black;
+
+}
+
+
+/*--- Contact Form --*/
+.form-group {
+  margin-bottom: 1.3rem;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #b2b5b8 !important;
+}
+
+hr.socket {
+  border-top: .2rem solid #666b71;
+  width: 100%;
+}
+
+
+/*
+.form-control-x {
+    background-color: #53595f;
+    border-radius: 0;
+    border: .15rem solid #666b71;
+    color: white!important;
+    font-size: 1.1rem;
+}
+.form-control-x:focus {
+    background-color: #53595f;
+    border: .15rem solid #666b71;
+}
+*/
+
+div .movemedown{
+  /*p!*adding-top: 1rem;
+ padding-right: 2rem;*!*/
+}
+
+
+/*============= TEAM SECTION FIXED BG IMG LIGHT =============*/
+
+/*--- Team Light Background Image --*/
+/*.fixed-light {*/
+/*  background: center/cover url('../assets/img/BGIMAGE/men-1245982_1920-HD.jpg');*/
+/*  position: fixed;*/
+/*  height: 100%;*/
+/*  width: 100%;*/
+/*  -webkit-transform: translateZ(0);*/
+/*  transform: translateZ(0);*/
+/*  will-change: transform;*/
+/*  z-index: -1;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  display: table;*/
+
+/*}*/
+
+/*.light {*/
+/*  background: rgba(0,0,0,.1);*/
+/*  padding: 5rem 0;*/
+/*  z-index: 1000;*/
+/*}*/
+
+.fixed-light {
+  background-image: url('../assets/img/BGIMAGE/men-1245982_1920-HD.jpg');
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: table;
+}
+.fixed-light-test {
+  background: center/cover url('../assets/img/BGIMAGE/men-1245982_1920-HD.jpg');
+  position: fixed;
+  top:0;
+  left:0;
+  width:50vw;
+  height:50vh;
+  z-index: 9999;
+}
+.light {
+  background-color: rgba(5, 0, 0, 0.6);
+  padding: 5rem 0;
+  z-index: 1000;
+}
+
+
+.owl-stage {
+  display: flex;
+}
+
+.card {
+  height: 100%;
+  border-radius: 0;
+  text-align: center;
+  margin: 0 1rem;
+  border: .1rem solid rgba(0, 0, 0, .075);
+  box-shadow: 0 0 .8rem rgba(0, 0, 0, .075);
+  transition: transform .4s ease;
+
+
+}
+
+
+
+.card:hover {
+  transform: scale(.95);
+
+}
+
+button.owl-dot.active span,
+button.owl-dot:hover span {
+  background: #1EBBA3
+}
+
+ul.social {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+ul.social li {
+  display: inline;
+  padding-right: .8rem;
+}
+
+ul.social li a {
+  color: #5cb85c;
+  transition: all .2s ease;
+}
+
+ul.social li a:hover {
+  color: #505962;
+}
+
+.team-icon-padding{
+  padding-bottom: 3rem;
+}
+
+/*.card-img-top{
+    border-radius: 25px;
+}*/
+
+
+
+
+/*============= MEDIA QUERIES =============*/
+
+/* Devices under 992px (lg) */
+@media (max-width: 991.98px) {
+  .caption h1 {
+    font-size: 3.5rem;
+    letter-spacing: .2rem;
+    padding-bottom: .8rem;
+  }
+
+  .caption h3 {
+    font-size: 2.2rem;
+    padding-bottom: 1.7rem;
+  }
+
+  .caption .btn-lg {
+    padding: .7rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .clients img {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+/* Devices under 768px (md) */
+@media (max-width: 767.98px) {
+  .caption h1 {
+    font-size: 2.7rem;
+    letter-spacing: .15rem;
+    padding-bottom: .5rem;
+  }
+
+  .caption h3 {
+    font-size: 1.7rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .caption .btn-lg {
+    padding: .6rem 1.1rem;
+  }
+
+  #features h1 {
+    font-size: 2rem;
+  }
+
+  .features-font-icons {
+    background-image: url('../assets/img/ABOUTUS/pexels-pixabay-355321-MOBILE.jpg')
+  }
+
+  .fixed-light {
+    background-image: url('../assets/img/TEAM/men-1245982_1280-mobileUsers.jpg')
+  }
+
+  .footer {
+    background: url('../assets/img/CONTACT/pexels-splitshire-1526.jpg') no-repeat;
+  }
+
+  .top-scroll {
+    display: none !important;
+  }
+
+
+}
+
+/* Devices under 576px (sm) */
+@media (max-width: 575.98px) {
+  .caption h1 {
+    font-size: 1.9rem;
+    letter-spacing: .1rem;
+    padding-bottom: .4rem;
+  }
+
+  .caption h3 {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+  }
+
+  .caption .btn-lg {
+    padding: .4rem .9rem;
+    font-size: .9rem;
+  }
+
+  .input-group-text span {
+    display: inline-block;
+    width: 2rem;
+  }
+
+
+}
