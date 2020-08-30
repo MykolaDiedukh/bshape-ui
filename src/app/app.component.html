@@ -523,31 +523,7 @@
 <div id="team" class="offset">
 
 
-  <div>Some tags before</div>
-  <owl-carousel-o [options]="customOptions">
 
-    <ng-container *ngFor="let slide of slidesData">
-      <ng-template class="slide" carouselSlide [id]="slide.id">
-        <div class="card">
-          <img src="{{slide.img}}" alt=""
-               class="card-img-top rounded-corners">
-          <div class="card-body">
-            <h4 class="font-weight-bold">{{slide.name}}</h4>
-            <h5 class="text-color-mark">{{slide.role}}</h5>
-            <p class="border-top border-bottom py-3 my-3">{{slide.mainRole}}</p>
-            <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-            </ul>
-          </div>
-        </div> <!-- End Card -->
-      </ng-template>
-    </ng-container>
-
-  </owl-carousel-o>
-  <div>Some tags after</div>
 
 
   <!-- Start Fixed BG IMG Light -->
@@ -565,74 +541,33 @@
 
       <div class="container">
         <div class="os-animation" data-animation="animate__animated animate__fadeInUp">
-          <div id="team-carousel" class="owl-carousel owl-theme">
+      <div></div>
+      <owl-carousel-o [options]="customOptions">
 
+        <ng-container *ngFor="let slide of slidesData" class="owl-theme">
+          <ng-template class="slide" carouselSlide [id]="slide.id">
             <div class="card">
-              <img src="assets/img/TEAM/pexels-emre-keshavarz-3526923.jpg" alt=""
+              <img src="{{slide.img}}" alt=""
                    class="card-img-top rounded-corners">
               <div class="card-body">
-                <h4 class="font-weight-bold">Krystian</h4>
-                <h5 class="text-color-mark">Ceo</h5>
-                <p class="border-top border-bottom py-3 my-3">bShape owner.</p>
+                <h4 class="font-weight-bold">{{slide.name}}</h4>
+                <h5 class="text-color-mark">{{slide.role}}</h5>
+                <p class="border-top border-bottom py-3 my-3">{{slide.mainRole}}</p>
                 <ul class="social">
-                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                  <li><a href="{{slide.facebookLink}}}"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="{{slide.twitterLink}}}"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="{{slide.instagramLink}}}"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="{{slide.youtubeLink}}}"><i class="fab fa-youtube"></i></a></li>
                 </ul>
               </div>
             </div> <!-- End Card -->
+          </ng-template>
+        </ng-container>
 
-            <div class="card">
-              <img src="assets/img/TEAM/pexels-ensiha-digital-4060363-team.jpg" alt=""
-                   class="card-img-top rounded-corners">
-              <div class="card-body">
-                <h4 class="font-weight-bold">Mykola</h4>
-                <h5 class="text-color-mark">Ceo</h5>
-                <p class="border-top border-bottom py-3 my-3">bShape owner.</p>
-                <ul class="social">
-                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                </ul>
-              </div>
-            </div> <!-- End Card -->
+      </owl-carousel-o>
+      <div></div>
 
-            <div class="card">
-              <img src="assets/img/TEAM/pexels-andrea-piacquadio-3778527-team.jpg" alt=""
-                   class="card-img-top">
-              <div class="card-body">
-                <h4 class="font-weight-bold">Kenobi</h4>
-                <h5 class="text-color-mark">Jedi master</h5>
-                <p class="border-top border-bottom py-3 my-3">Just gimme some beer.</p>
-                <ul class="social">
-                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                </ul>
-              </div>
-            </div> <!-- End Card -->
 
-            <div class="card">
-              <img src="assets/img/TEAM/pexels-christina-morillo-1181424.jpg" alt=""
-                   class="card-img-top rounded-corners">
-              <!--761x 602  najlepsza rozdzielczość -->
-              <div class="card-body">
-                <h4 class="font-weight-bold">Padme</h4>
-                <h5 class="text-color-mark">Anakin's baby</h5>
-                <p class="border-top border-bottom py-3 my-3">My master anakin is looking for me.</p>
-                <ul class="social">
-                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                </ul>
-              </div>
-            </div> <!-- End Card -->
-
-          </div> <!-- End Team Carousel -->
         </div> <!-- End Animation -->
       </div><!-- End Container -->
 
