@@ -63,7 +63,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-item nav-link" href="#">
-                <span data-toggle="modal" data-target="#modalLogin">Login</span>
+                <span data-toggle="modal"   (click)="basicModal.show()" data-target="#modalLogin">Login</span>
               </a>
             </li>
             <li class="nav-item">
@@ -324,16 +324,34 @@
 
 <!--   LOGIN -->
 
-
+<div   class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+<!--        <button type="button" class="close pull-right" aria-label="Close" ">-->
+<!--          <span aria-hidden="true">×</span>-->
+<!--        </button>-->
+        <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Close</button>
+        <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!--<div [formGroup]="loginForm" class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle"-->
-<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle"
+<div mdbModal class="modal fade" #basicModal="mdbModal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle"
      aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <p class="modal-title display-4 px-4" id="modalLoginTitle">Login</p>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <button type="button" class="close" data-dismiss="modal"  (click)="basicModal.hide()" aria-label="Close">
+          <span  (click)="basicModal.hide()" aria-hidden="true">&times;</span>
         </button>
       </div>
 
@@ -367,9 +385,9 @@
 
       <div class="col">
         <div class="modal-footer">
-          <button type="button" class="btn closebutton btn-lg" data-dismiss="modal">Close</button>
+          <button type="button" class="btn closebutton btn-lg"  (click)="basicModal.hide()" data-dismiss="modal">Close</button>
 <!--          <button (click)="LoginUser(loginForm.value)" type="button" class="btn btn-features-login  btn-lg">Log in</button>-->
-          <button type="button" class="btn btn-features-login  btn-lg">Log in</button>
+          <button type="button" class="btn btn-features-login  btn-lg">Log in</button> // ma być fun ktora zamyka i loguje
         </div>
       </div>
 
@@ -500,6 +518,34 @@
 
 <!-- Start Team Section -->
 <div id="team" class="offset">
+
+
+  <div>Some tags before</div>
+  <owl-carousel-o [options]="customOptions">
+
+    <ng-container *ngFor="let slide of slidesData">
+      <ng-template class="slide" carouselSlide [id]="slide.id">
+        <div class="card">
+          <img src="{{slide.img}}" alt=""
+               class="card-img-top rounded-corners">
+          <div class="card-body">
+            <h4 class="font-weight-bold">{{slide.name}}</h4>
+            <h5 class="text-color-mark">{{slide.role}}</h5>
+            <p class="border-top border-bottom py-3 my-3">{{slide.mainRole}}</p>
+            <ul class="social">
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div> <!-- End Card -->
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+  <div>Some tags after</div>
+
 
   <!-- Start Fixed BG IMG Light -->
   <div class="fixed">
