@@ -11,12 +11,21 @@ export class AppComponent {
   }
 
   loginPasswordInputType='password';
+  registrationPasswordInputType='password';
 
   changeLoginPasswordInputType() {
-    if(this.loginPasswordInputType === 'password') {
+    if (this.loginPasswordInputType === 'password') {
       this.loginPasswordInputType = 'text';
     } else {
       this.loginPasswordInputType = 'password';
+    }
+  }
+
+  changeRegistrationPasswordInputType() {
+    if (this.registrationPasswordInputType === 'password'){
+      this.registrationPasswordInputType = 'text';
+    } else {
+      this.registrationPasswordInputType = 'password'
     }
   }
 

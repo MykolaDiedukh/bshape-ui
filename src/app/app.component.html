@@ -63,12 +63,12 @@
             </li>
             <li class="nav-item">
               <a class="nav-item nav-link" href="#">
-                <span data-toggle="modal"   (click)="basicModal.show()" data-target="#modalLogin">Login</span>
+                <span data-toggle="modal"   (click)="loginModal.show()" data-target="#modalLogin">Login</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-item nav-link" href="#">
-                <span data-toggle="modal" data-target="#modalRegistration">Registration</span>
+                <span data-toggle="modal" (click)="registrationModal.show()" data-target="#modalRegistration">Registration</span>
               </a>
             </li>
             <li class="nav-item">
@@ -324,34 +324,16 @@
 
 <!--   LOGIN -->
 
-<div   class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-<!--        <button type="button" class="close pull-right" aria-label="Close" ">-->
-<!--          <span aria-hidden="true">×</span>-->
-<!--        </button>-->
-        <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Close</button>
-        <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 <!--<div [formGroup]="loginForm" class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle"-->
-<div mdbModal class="modal fade" #basicModal="mdbModal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle"
+<div mdbModal class="modal fade" #loginModal="mdbModal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle"
      aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <p class="modal-title display-4 px-4" id="modalLoginTitle">Login</p>
-        <button type="button" class="close" data-dismiss="modal"  (click)="basicModal.hide()" aria-label="Close">
-          <span  (click)="basicModal.hide()" aria-hidden="true">&times;</span>
+        <button type="button" class="close" data-dismiss="modal"  (click)="loginModal.hide()" aria-label="Close">
+          <span  (click)="loginModal.hide()" aria-hidden="true">&times;</span>
         </button>
       </div>
 
@@ -388,7 +370,7 @@
 
       <div class="col">
         <div class="modal-footer">
-          <button type="button" class="btn closebutton btn-lg"  (click)="basicModal.hide()" data-dismiss="modal">Close</button>
+          <button type="button" class="btn closebutton btn-lg"  (click)="loginModal.hide()" data-dismiss="modal">Close</button>
 <!--          <button (click)="LoginUser(loginForm.value)" type="button" class="btn btn-features-login  btn-lg">Log in</button>-->
           <button type="button" class="btn btn-features-login  btn-lg">Log in</button> // ma być fun ktora zamyka i loguje
         </div>
@@ -400,18 +382,19 @@
 
 
 <!--  REGISTRATION-->
-
+<!--<div mdbModal class="modal fade" #loginModal="mdbModal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle"-->
+<!--     aria-hidden="true">-->
 <form>
 <!--  <div [formGroup]="registerForm" class="modal fade" id="modalRegistration" tabindex="-1" role="dialog" aria-labelledby="modalRegistrationTitle"-->
-  <div class="modal fade" id="modalRegistration" tabindex="-1" role="dialog" aria-labelledby="modalRegistrationTitle"
+  <div mdbModal class="modal fade" #registrationModal="mdbModal" id="modalRegistration" tabindex="-1" role="dialog" aria-labelledby="modalRegistrationTitle"
        aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered " role="document">
 
       <div class="modal-content">
         <div class="modal-header">
           <p class="modal-title display-4 px-4" id="modalRegistrationTitle">Sign Up</p>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="close" data-dismiss="modal" (click)="registrationModal.hide()" aria-label="Close">
+            <span (click)="registrationModal.hide()" aria-hidden="true">&times;</span>
           </button>
         </div>
 
@@ -477,11 +460,14 @@
                 <span class="input-group-text" id="regPassword"><i class="fas fa-lock fa-sm"></i></span>
               </div>
 
-              <input formControlName="password" type="password" class="form-control" placeholder="Enter password"
+              <input formControlName="password" type="{{registrationPasswordInputType}}" class="form-control" placeholder="Enter password"
                      data-toggle="password"
                      aria-describedby="regPassword">
               <div class="input-group-append">
-                <div class="input-group-text"><i class="fa fa-eye fa-sm"></i></div>
+                <div class="input-group-text" (click)="changeRegistrationPasswordInputType()">
+                  <i *ngIf="registrationPasswordInputType==='password'"  class="fa fa-eye fa-sm"></i>
+                  <i *ngIf="registrationPasswordInputType==='text'" class="fa fa-eye-slash fa-sm"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -492,11 +478,14 @@
                             <span class="input-group-text" id="regPasswordRapid"><i
                               class="fas fa-lock fa-sm"></i></span>
               </div>
-              <input formControlName="submitPassword" type="password" class="form-control" placeholder="Repeat password"
+              <input formControlName="submitPassword" type="{{registrationPasswordInputType}}" class="form-control" placeholder="Repeat password"
                      data-toggle="password"
                      aria-describedby="regPasswordRapid">
               <div class="input-group-append">
-                <div class="input-group-text"><i class="fa fa-eye fa-sm"></i></div>
+                <div class="input-group-text" (click)="changeRegistrationPasswordInputType()">
+                  <i *ngIf="registrationPasswordInputType==='password'"  class="fa fa-eye fa-sm"></i>
+                  <i *ngIf="registrationPasswordInputType==='text'" class="fa fa-eye-slash fa-sm"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -507,7 +496,7 @@
 
         <div class="col">
           <div class="modal-footer">
-            <button type="button" class="btn closebutton btn-lg" data-dismiss="modal">Close</button>
+            <button type="button" class="btn closebutton btn-lg" (click)="registrationModal.hide()" data-dismiss="modal">Close</button>
 <!--            <button (click)="RegisterUser(registerForm.value)" type="button" class="btn btn-features-register btn-lg">Save changes</button>-->
             <button type="button" class="btn btn-features-register btn-lg">Save changes</button>
           </div>
