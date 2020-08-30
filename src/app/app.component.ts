@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import {ModalDirective} from 'angular-bootstrap-md';
+import {Constants} from './contants';
+import {UserService} from './services/user-service';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +10,47 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  loginPasswordInputType='password';
+
+  registrationPasswordInputType='password';
+  // common elements
+  mainMessage: string = '';
+
+  @ViewChild('registrationNewUserModal') registrationNewUserModal: ModalDirective;
+
+  firstName: string = '';
+  lastName: string = '';
+  email: string = '';
+  sex: number;
+  password: string = '';
+  repeatPassword: string = '';
+
+
+  registrationNewUserInfoMessage: string = '';
+
+// jeśli dodać opcji do konstruktora wtedy przestanie działać cała strona
+
+  // constructor(private userService: UserService) {
+  // }
   constructor() {
   }
 
-  loginPasswordInputType='password';
-  registrationPasswordInputType='password';
+  clearData(): void {
+    // messages
+    this.mainMessage = '';
+    this.registrationNewUserInfoMessage = '';
 
+    // fields
+    this.firstName = '';
+    this.lastName = '';
+    this.email = '';
+    this.sex = undefined;
+    this.password = '';
+    this.repeatPassword = '';
+  }
+
+  // Hide and Show password in loginModal
   changeLoginPasswordInputType() {
     if (this.loginPasswordInputType === 'password') {
       this.loginPasswordInputType = 'text';
@@ -21,12 +59,45 @@ export class AppComponent {
     }
   }
 
+  // Hide and Show password in registrationModal
   changeRegistrationPasswordInputType() {
     if (this.registrationPasswordInputType === 'password'){
       this.registrationPasswordInputType = 'text';
     } else {
       this.registrationPasswordInputType = 'password'
     }
+  }
+
+  // registration new user(create)
+  registrationNewUser() {
+    if (this.firstName.length === 0 ||
+      this.lastName.length === 0 ||
+      this.email.length === 0 ||
+      this.password.length === 0 ||
+      this.repeatPassword.length === 0 ||
+      this.sex === undefined ) {
+      this.registrationNewUserInfoMessage = Constants.MANDATORY_FIELDS_ERROR_MESSSAGE;
+      return;
+    }
+
+    let user = {
+      firstName: this.firstName,
+      lastName: this.lastName,
+      email: this.email,
+      sex: this.sex,
+      password: this.password,
+      repeatPassword: this.repeatPassword
+    }
+
+    // Metoda nie może działać po konstruktor z parametrami jest za komentowany
+
+    // this.userService.registrationNewUser(user).subscribe( data => {
+    //     this.registrationNewUserModal.hide();
+    //     this.mainMessage = 'Registration was successfully';
+    //   },
+    //   error => {
+    //     this.registrationNewUserInfoMessage = error;
+    //   })
   }
 
   customOptions: OwlOptions = {

@@ -322,12 +322,12 @@
 
 <body>
 
-<!--   LOGIN -->
+<!-- Login section -->
 
 
 <!--<div [formGroup]="loginForm" class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle"-->
 <div mdbModal class="modal fade" #loginModal="mdbModal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle"
-     aria-hidden="true">
+     aria-hidden="true" (opened)="clearData();">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -381,13 +381,13 @@
 </div>
 
 
-<!--  REGISTRATION-->
+<!-- Registration section -->
 <!--<div mdbModal class="modal fade" #loginModal="mdbModal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle"-->
 <!--     aria-hidden="true">-->
 <form>
 <!--  <div [formGroup]="registerForm" class="modal fade" id="modalRegistration" tabindex="-1" role="dialog" aria-labelledby="modalRegistrationTitle"-->
   <div mdbModal class="modal fade" #registrationModal="mdbModal" id="modalRegistration" tabindex="-1" role="dialog" aria-labelledby="modalRegistrationTitle"
-       aria-hidden="true">
+       aria-hidden="true" (opened)="clearData();">
     <div class="modal-dialog modal-dialog-centered " role="document">
 
       <div class="modal-content">
