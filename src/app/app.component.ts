@@ -11,12 +11,21 @@ export class AppComponent {
   }
 
   loginPasswordInputType='password';
+  registrationPasswordInputType='password';
 
   changeLoginPasswordInputType() {
-    if(this.loginPasswordInputType === 'password') {
+    if (this.loginPasswordInputType === 'password') {
       this.loginPasswordInputType = 'text';
     } else {
       this.loginPasswordInputType = 'password';
+    }
+  }
+
+  changeRegistrationPasswordInputType() {
+    if (this.registrationPasswordInputType === 'password'){
+      this.registrationPasswordInputType = 'text';
+    } else {
+      this.registrationPasswordInputType = 'password'
     }
   }
 
@@ -48,30 +57,39 @@ export class AppComponent {
     name: "Krystian",
     role: "Ceo",
     mainRole: "bShape owner.",
-    facebookLink: 'https://www.facebook.com'
+    facebookLink: 'https://www.facebook.com',
+    twitterLink: 'https//www.twitter.com',
+    instagramLink: 'https//www.instagram.com',
+    youtubeLink: 'https//www.youtube.com'
   },{
     id:2,
-    img: "assets/img/TEAM/pexels-emre-keshavarz-3526923.jpg",
-    name: "Michał",
-    role: "Programista",
-    mainRole: "bShape owner."
+    img: "assets/img/TEAM/pexels-ensiha-digital-4060363-team.jpg",
+    name: "Mykola",
+    role: "Ceo",
+    mainRole: "bShape owner.",
+    facebookLink: 'https://www.facebook.com',
+    twitterLink: 'https//www.twitter.com',
+    instagramLink: 'https//www.instagram.com',
+    youtubeLink: 'https//www.youtube.com'
   },{
     id:3,
-    img: "assets/img/TEAM/pexels-emre-keshavarz-3526923.jpg",
-    name: "Krystian",
-    role: "Ceo",
-    mainRole: "bShape owner."
+    img: "assets/img/TEAM/pexels-andrea-piacquadio-3778527-team.jpg",
+    name: "Kenobi",
+    role: "Jedi master",
+    mainRole: "Just gimme some beer.",
+    facebookLink: 'https://www.facebook.com',
+    twitterLink: 'https//www.twitter.com',
+    instagramLink: 'https//www.instagram.com',
+    youtubeLink: 'https//www.youtube.com'
   },{
     id:4,
-    img: "assets/img/TEAM/pexels-emre-keshavarz-3526923.jpg",
-    name: "Krystian",
-    role: "Ceo",
-    mainRole: "bShape owner."
-  },{
-    id:5,
-    img: "assets/img/TEAM/pexels-emre-keshavarz-3526923.jpg",
-    name: "Krystian",
-    role: "Ceo",
-    mainRole: "bShape owner."
+    img: "assets/img/TEAM/pexels-christina-morillo-1181424.jpg",
+    name: "Padme",
+    role: "Anakin's baby",
+    mainRole: "My master anakin is looking for me.",
+    facebookLink: 'https://www.facebook.com',
+    twitterLink: 'https//www.twitter.com',
+    instagramLink: 'https//www.instagram.com',
+    youtubeLink: 'https//www.youtube.com'
   }];
 }

@@ -861,15 +861,7 @@ div .movemedown{
   left: 0;
   display: table;
 }
-.fixed-light-test {
-  background: center/cover url('../assets/img/BGIMAGE/men-1245982_1920-HD.jpg');
-  position: fixed;
-  top:0;
-  left:0;
-  width:50vw;
-  height:50vh;
-  z-index: 9999;
-}
+
 .light {
   background-color: rgba(5, 0, 0, 0.6);
   padding: 5rem 0;
@@ -1028,3 +1020,5 @@ ul.social li a:hover {
 
 
 }
+
+
