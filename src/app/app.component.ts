@@ -9,6 +9,17 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class AppComponent {
   constructor() {
   }
+
+  loginPasswordInputType='password';
+
+  changeLoginPasswordInputType() {
+    if(this.loginPasswordInputType === 'password') {
+      this.loginPasswordInputType = 'text';
+    } else {
+      this.loginPasswordInputType = 'password';
+    }
+  }
+
   customOptions: OwlOptions = {
     loop: true,
     autoplay: true,

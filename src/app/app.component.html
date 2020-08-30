@@ -372,11 +372,14 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="loginPassword"><i class="fas fa-lock fa-sm"></i></span>
             </div>
-            <input formControlName="password" type="password" class="form-control" placeholder="Enter password"
+            <input formControlName="password" type="{{loginPasswordInputType}}" class="form-control" placeholder="Enter password"
                    data-toggle="password"
                    aria-describedby="loginPassword">
             <div class="input-group-append">
-              <div class="input-group-text"><i class="fa fa-eye fa-sm"></i></div>
+              <div class="input-group-text" (click)="changeLoginPasswordInputType()">
+                <i *ngIf="loginPasswordInputType==='password'"  class="fa fa-eye fa-sm"></i>
+                <i *ngIf="loginPasswordInputType==='text'" class="fa fa-eye-slash fa-sm"></i>
+              </div>
             </div>
           </div>
         </div>
