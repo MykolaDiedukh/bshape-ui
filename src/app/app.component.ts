@@ -1,15 +1,18 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import {ModalDirective} from 'angular-bootstrap-md';
 import {Constants} from './contants';
-import {UserService} from './services/user-service';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {LoginAction} from './state/auth.actions';
+/*import {UserService} from './services/user-service';*/
+import { Store } from '@ngxs/store';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
 
   loginPasswordInputType='password';
 
@@ -33,8 +36,22 @@ export class AppComponent {
 
   // constructor(private userService: UserService) {
   // }
-  constructor() {
+  public loginForm: FormGroup;
+
+  constructor(public store: Store, public formBuilder: FormBuilder) {
   }
+
+  ngOnInit(): void {
+    this.loginForm = this.formBuilder.group({
+      email: ['', Validators.required],
+      password: ['', Validators.required]
+    });
+  }
+
+  login() {
+    this.store.dispatch(new LoginAction(this.loginForm.value.email, this.loginForm.value.password));
+  }
+
 
   clearData(): void {
     // messages
