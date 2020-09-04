@@ -14,6 +14,7 @@ import { Store } from '@ngxs/store';
 })
 export class AppComponent implements OnInit{
 
+
   loginPasswordInputType='password';
 
   registrationPasswordInputType='password';
