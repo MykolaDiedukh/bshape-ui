@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MDBBootstrapModule, ModalModule} from 'angular-bootstrap-md';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -16,11 +16,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
     CarouselModule,
-    BrowserAnimationsModule,
-    ReactiveFormsModule,
-    NgxsModule.forRoot([AuthState]),
-    HttpClientModule,
-    ModalModule.forRoot()
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
