@@ -1,5 +1,6 @@
 /* tslint:disable */
 import { BodyType } from './body-type';
+import { Role } from './role';
 export interface User {
   age?: number;
   bodyType?: BodyType;
@@ -9,6 +10,7 @@ export interface User {
   id?: number;
   lastName?: string;
   password?: string;
+  roles?: Array<Role>;
   sex?: number;
   weight?: number;
 }
