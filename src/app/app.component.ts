@@ -10,6 +10,7 @@ export class AppComponent {
   constructor() {
   }
 
+
   loginPasswordInputType='password';
   registrationPasswordInputType='password';
 
