@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>bShape - Dietetic group</title>
+  <!-- Bootstrap CSS https://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/277b7d97de.js" crossorigin="anonymous"></script>
+  <!-- Style.css -->
+  <!--  <link rel="stylesheet" href="assets/styleRework.css">-->
+  <!--  &lt;!&ndash; Style.css from index.html&ndash;&gt;-->
+  <!-- Plugins.css -->
+  <!--  <link rel="stylesheet" href="assets/css/plugins.css">-->
+  <!-- Google Fonts https://fonts.google.com/ -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>-->
+  <!--  &lt;!&ndash; Animate.css https://cdnjs.com/libraries/animate.css/-->
+  <!--      https://daneden.github.io/animate.css/ &ndash;&gt;-->
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css">-->
+  <!--  &lt;!&ndash; Lightbox Image Gallery https://cdnjs.com/libraries/lightbox2  https://lokeshdhakar.com/projects/lightbox2/ &ndash;&gt;-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
+  <!-- Owl Carousel https://cdnjs.com/libraries/OwlCarousel2
+      http://owlcarousel2.github.io/OwlCarousel2/ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+</head>
+<body data-spy="scroll" data-target="#navbarResponsive"> </body>
+
+
+
+<!-- Header part of site -->
+
+<header>
+
+  <!-- Start Home Section -->
+
+  <div id="home">
+
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+
+        <a href="#home" class="bshapeicon"><i class="fas fa-seedling text-success"></i> <span
+          class="text-light">b</span><span class="text-success">Shape</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+          <span class="custom-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#aboutus" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-item nav-link" href="#">
+                <span data-toggle="modal"   (click)="loginModal.show()" data-target="#modalLogin">Login</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-item nav-link" href="#">
+                <span data-toggle="modal" (click)="registrationModal.show()" data-target="#modalRegistration">Registration</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#pricing" class="nav-link">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a href="#team" class="nav-link">Team</a>
+            </li>
+            <li class="nav-item">
+              <a href="#novelties" class="nav-link">Novelties</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="#EN" class="nav-link">EN/PL</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- End Navigation -->
+
+    <!-- Start Landing Page Image -->
+
+    <!--<div class="landing">
+        <div class="home-wrap">
+            <div class="home-inner"></div>
+        </div>
+    </div>-->
+
+
+    <div class="video-background">
+      <div class="video-wrap">
+        <div id="video">
+          <video id="bgvid" playsinline autoplay="autoplay" muted loop>
+            <source src="assets/mp4/Tree-12687.webm" type="video/mp4">
+
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Landing Page Image -->
+
+    <!-- Start Landing Page Caption -->
+
+    <div class="caption text-center text-light text-uppercase">
+
+      <h1 class="font-weight-bold os-animation" data-animation="animate__animated animate__fadeInUp"
+          data-delay=".6s">Welcome to <span
+        class="text-light">b</span><span class="text-success">Shape</span>
+      </h1>
+      <h3 class="os-animation" data-animation="animate__animated animate__fadeInUp" data-delay=".8s">Nutrition &
+        Dietetics Team</h3>
+      <a href="#aboutus" class="btn btn-outline-light btn-lg rounded-4 os-animation"
+         data-animation="animate__animated animate__fadeInUp" data-delay="1s">Get Started</a>
+
+    </div>
+
+    <!-- End Landing Page Caption -->
+
+    <!-- Start Bouncing Down Arrow -->
+
+    <a href="#aboutus" class="down-arrow buncingarrow text-center">
+      <div class="arrow d-none d-md-block">
+        <i class="fas fa-chevron-circle-down"></i>
+      </div>
+    </a>
+  </div>
+
+  <!-- End Bouncing Down Arrow and home section -->
+
+</header>
+
+<!-- End of header section -->
+
+
+<!-- main section of site -->
+
+<main>
+
+
+  <!-- Start Features Section -->
+  <div class="offset">
+
+    <!--  Start Theme Heading-->
+
+    <div class="test-font" id="aboutus">
+      <div class="row text-center py-4 os-animation justify-content-center"
+           data-animation="animate__animated animate__fadeInUp">
+        <div class="col-11 col-md-10 col-lg-9">
+
+          <div class="jumbotron m-0 py-5">
+            <div>
+
+              <div class="row huge-icons">
+
+                <div class="col-md-6 home-box mb-5 mb-md-0">
+                  <i class="fas fa-users mb-4"> </i>
+                  <p class="m-0 aboutUsparagraf">We are young dynamic developing team associated
+                    with creating <span class="text-success aboutUsparagraf"> diets </span> and
+                    <span class="text-success aboutUsparagraf"> workout-schedules </span> for Your
+                    preferences and way of life.</p>
+                </div>
+
+                <div class="col-md-6 home-box mb-5 mb-md-0">
+                  <i class="fas fa-tasks mb-3"></i>
+                  <p class="m-2 aboutUsparagraf">
+                    <span class="text-success aboutUsparagraf">Vegan? Gluten free?</span> <span
+                    class="aboutUsparagraf">or maybe You just can't tolerate lactose?
+                                        Dont worry! You can choose any<span
+                      class="text-success aboutUsparagraf"> diet </span> You want.
+                                    </span>
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Start Fixed BG IMG Dark -->
+
+    <div class="fixed">
+      <div class="row dark text-light text-center py-4 text-bgdark">
+
+        <div class="col-12 os-animation features-icon-padding"
+             data-animation="animate__animated animate__fadeInUp">
+          <a class="features-bshapeicon-styling"><i class="fas fa-seedling text-success"></i> <span
+            class="heading">b</span><span
+            class="text-success heading">Shape</span>
+          </a>
+        </div>
+
+        <div class="col-md-4 os-animation" data-animation="animate__animated animate__fadeInLeft">
+          <h3 class="features-top-padding">Diet</h3>
+          <div class="feature py-2">
+						<span class="fa-layers fa-3x">
+							<i class="fas fa-leaf text-success"></i>
+						</span>
+          </div>
+          <p class="lead features-bottom-padding">Combined to Your lifestyle.</p>
+        </div>
+
+        <div class="col-md-4 os-animation" data-animation="animate__animated animate__fadeInUp">
+          <h3 class="features-top-padding">Professional schedule</h3>
+          <div class="feature py-2">
+						<span class="fa-layers fa-3x text-success">
+							<i class="far fa-check-circle"></i>
+						</span>
+          </div>
+          <p class="lead features-bottom-padding">To meet Your expectations and needs.</p>
+        </div>
+
+        <div class="col-md-4 os-animation" data-animation="animate__animated animate__fadeInRight">
+          <h3 class="features-top-padding">Qualified team</h3>
+          <div class="feature py-2">
+						<span class="fa-layers fa-3x text-success">
+							 <i class="fas fa-user-md mb-4"> </i>
+						</span>
+          </div>
+          <p class="lead features-bottom-padding">To help You achieve Your goals.</p>
+        </div>
+
+      </div>
+
+      <!-- End Row Dark -->
+
+      <div class="fixed-wrap">
+        <div class="features-font-icons"></div>
+      </div>
+    </div>
+
+    <!-- End Fixed BG IMG Dark -->
+
+    <!-- End of Features Section -->
+  </div>
+
+  <!-- Start of pricing section  -->
+
+  <div id="pricing" class="offset">
+
+    <div class="jumbotron mb-0">
+      <div class="container py-2">
+
+        <div class="os-animation" data-animation="animate__animated animate__fadeInLeft">
+          <h3 class="heading pricingclass text-secondary">Pricing</h3>
+        </div>
+
+        <div class="row justify-content-center text-center px-lg-4 px-xl-5">
+
+          <div class="col-md-6 col-lg-4 os-animation" data-animation="animate__animated animate__fadeInLeft">
+            <div class="pricing-column">
+              <h3 class="border-bottom py-2 mx-3">BASIC</h3>
+              <p class="lead py-2">The Basic Plan, the best plan to get you started off.</p>
+              <h4 class="pb-2">Week fulled with our schedule: 4</h4>
+              <h4 class="pb-2">Exercises and tips: 12</h4>
+              <h4>24h/7 Professional help</h4>
+              <h1 class="py-3">$49</h1>
+              <a href="#contact" class="btn btn-secondary btn-sm">Buy Now</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 os-animation" data-animation="animate__animated animate__fadeInLeft">
+            <div class="pricing-column">
+              <div class="ribbon">Best Value</div>
+              <h3 class="border-bottom py-2 mx-3 text-color-mark font-weight-bold">PREMIUM</h3>
+              <p class="lead py-2">The Premium Plan, the best overall value you can get.</p>
+              <h4 class="pb-2">Week fulled with our schedule: 12</h4>
+              <h4 class="pb-2">Exercises and tips: 24</h4>
+              <h4>24h/7 Professional help & Private session on skype</h4>
+              <h4 class="greenshow">Private session on Our Instagram</h4>
+              <h1 class="py-3">$99</h1>
+              <a href="#contact" class="btn btn-features btn-sm">Buy Now</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 os-animation" data-animation="animate__animated animate__fadeInLeft">
+            <div class="pricing-column">
+              <div class="ribbon-pro">Golden cart</div>
+              <h3 class="border-bottom py-2 mx-3 goldenshow">PRO</h3>
+              <p class="lead py-2">The Pro Plan, for those who loves
+                convenience and bonuses.</p>
+              <h4 class="pb-2">Week fulled with our schedule: 48</h4>
+              <h4 class="pb-2">Exercises and tips: 32</h4>
+              <h4>24h/7 Professional help & Private session on skype</h4>
+              <h4 class="goldenshow">Golden cart with many additional benefits</h4>
+              <h1 class="py-3">$149</h1>
+              <a href="#contact" class="btn btn-sm richbutton">Buy Now</a>
+            </div>
+          </div>
+
+        </div> <!-- End Row -->
+
+      </div> <!-- End Container -->
+    </div> <!-- End Jumbotron-->
+
+  </div>
+  <!-- End of Pricing Section -->
+
+  <!-- End of Main Section -->
+</main>
+
+<!--   STAR body section  -->
+
+<body>
+
+<!-- Login section -->
+
+
+<!--<div [formGroup]="loginForm" class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle"-->
+<div mdbModal class="modal fade" #loginModal="mdbModal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle"
+     aria-hidden="true" >  <!--(opened)="clearData();"-->
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title display-4 px-4" id="modalLoginTitle">Login</p>
+        <button type="button" class="close" data-dismiss="modal"  (click)="loginModal.hide()" aria-label="Close">
+          <span  (click)="loginModal.hide()" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="col">
+          <div  class="input-group mb-3 input-group-lg">
+            <div class="input-group-prepend">
+                            <span class="input-group-text" id="loginUserName"><i
+                              class="far fa-envelope fa-sm"></i></span>
+            </div>
+
+            <input formControlName="username" type="text" class="form-control" placeholder="Email" aria-label="Email"
+                   aria-describedby="loginUserName">
+
+          </div>
+        </div>
+
+        <div class="col">
+          <div class=" input-group mb-3 input-group-lg">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="loginPassword"><i class="fas fa-lock fa-sm"></i></span>
+            </div>
+            <input formControlName="password" type="{{loginPasswordInputType}}" class="form-control" placeholder="Enter password"
+                   data-toggle="password"
+                   aria-describedby="loginPassword">
+            <div class="input-group-append">
+              <div class="input-group-text" (click)="changeLoginPasswordInputType()">
+                <i *ngIf="loginPasswordInputType==='password'"  class="fa fa-eye fa-sm"></i>
+                <i *ngIf="loginPasswordInputType==='text'" class="fa fa-eye-slash fa-sm"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col">
+        <div class="modal-footer">
+          <button type="button" class="btn closebutton btn-lg"  (click)="loginModal.hide()" data-dismiss="modal">Close</button>
+          <!--          <button (click)="LoginUser(loginForm.value)" type="button" class="btn btn-features-login  btn-lg">Log in</button>-->
+          <button type="button" class="btn btn-features-login  btn-lg">Log in</button> // ma być fun ktora zamyka i loguje
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Registration section -->
+<!--<div mdbModal class="modal fade" #loginModal="mdbModal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle"-->
+<!--     aria-hidden="true">-->
+<form>
+  <!--  <div [formGroup]="registerForm" class="modal fade" id="modalRegistration" tabindex="-1" role="dialog" aria-labelledby="modalRegistrationTitle"-->
+  <div mdbModal class="modal fade" #registrationModal="mdbModal" id="modalRegistration" tabindex="-1" role="dialog" aria-labelledby="modalRegistrationTitle"
+       aria-hidden="true"> <!--(opened)="clearData();"-->
+    <div class="modal-dialog modal-dialog-centered " role="document">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-title display-4 px-4" id="modalRegistrationTitle">Sign Up</p>
+          <button type="button" class="close" data-dismiss="modal" (click)="registrationModal.hide()" aria-label="Close">
+            <span (click)="registrationModal.hide()" aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+
+          <div class="col">
+            <div class="input-group mb-3 input-group-lg">
+              <div class="input-group-prepend">
+                            <span class="input-group-text" id="regFirstName">
+                              <i class="fas fas fa-user fa-sm"></i>
+                            </span>
+              </div>
+              <!--              <input type="text" [(ngModel)]="user.firstName"] class="form-control" placeholder="First name" aria-label="FirstName"-->
+              <!--                     aria-describedby="regFirstName" #firstName="ngModel">              -->
+              <input formControlName="firstName" type="text" class="form-control" placeholder="First name" aria-label="FirstName"
+                     aria-describedby="regFirstName">
+            </div>
+          </div>
+          <!--          <div [hidden]="!firstName.pristine" class="alert alert-danger">First name is required</div>-->
+
+          <div class="col">
+            <div class="input-group mb-3 input-group-lg">
+              <div class="input-group-prepend">
+                                <span class="input-group-text" id="regLastName"><i
+                                  class="fas fas fa-user fa-sm"></i></span>
+              </div>
+              <!--              <input type="text" [(ngModel)]="user.lastName"] class="form-control" placeholder="Last name" aria-label="LastName"-->
+              <!--                     aria-describedby="regLastName" required #lastName="ngModel">-->
+              <input formControlName="lastName" type="text" class="form-control" placeholder="Last name" aria-label="LastName"
+                     aria-describedby="regLastName" required>
+            </div>
+          </div>
+          <!--          <div [hidden]="!lastName.pristine" class="alert alert-danger">Last name is required</div>-->
+
+          <div class="col">
+            <div class="input-group mb-3 input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="regEmail"><i class="far fa-envelope fa-sm"></i></span>
+              </div>
+
+              <input formControlName="email" type="text" class="form-control" placeholder="Email" aria-label="Email"
+                     aria-describedby="regEmail" required >
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="input-group mb-3 input-group-lg">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01"><i class="fas fa-venus-mars"></i></label>
+              </div>
+              <select formControlName="sex" class="custom-select" id="inputGroupSelect01" >
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                <option value="3">It</option>
+              </select>
+            </div>
+          </div>
+
+
+          <div class="col">
+            <div class="input-group mb-3 input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="regPassword"><i class="fas fa-lock fa-sm"></i></span>
+              </div>
+
+              <input formControlName="password" type="{{registrationPasswordInputType}}" class="form-control" placeholder="Enter password"
+                     data-toggle="password"
+                     aria-describedby="regPassword">
+              <div class="input-group-append">
+                <div class="input-group-text" (click)="changeRegistrationPasswordInputType()">
+                  <i *ngIf="registrationPasswordInputType==='password'"  class="fa fa-eye fa-sm"></i>
+                  <i *ngIf="registrationPasswordInputType==='text'" class="fa fa-eye-slash fa-sm"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="input-group mb-3 input-group-lg">
+              <div class="input-group-prepend">
+                            <span class="input-group-text" id="regPasswordRapid"><i
+                              class="fas fa-lock fa-sm"></i></span>
+              </div>
+              <input formControlName="submitPassword" type="{{registrationPasswordInputType}}" class="form-control" placeholder="Repeat password"
+                     data-toggle="password"
+                     aria-describedby="regPasswordRapid">
+              <div class="input-group-append">
+                <div class="input-group-text" (click)="changeRegistrationPasswordInputType()">
+                  <i *ngIf="registrationPasswordInputType==='password'"  class="fa fa-eye fa-sm"></i>
+                  <i *ngIf="registrationPasswordInputType==='text'" class="fa fa-eye-slash fa-sm"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--          <p *ngFor="let error of errors">-->
+          <!--            <span *ngIf="error.show">{{error.description}}</span>-->
+          <!--          </p>-->
+        </div>
+
+        <div class="col">
+          <div class="modal-footer">
+            <button type="button" class="btn closebutton btn-lg" (click)="registrationModal.hide()" data-dismiss="modal">Close</button>
+            <!--            <button (click)="RegisterUser(registerForm.value)" type="button" class="btn btn-features-register btn-lg">Save changes</button>-->
+            <button type="button" class="btn btn-features-register btn-lg">Save changes</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>
+<!--/Registration-->
+
+<!-- Start Team Section -->
+<div id="team" class="offset">
+
+
+
+
+
+  <!-- Start Fixed BG IMG Light -->
+  <div class="fixed">
+
+    <div class="row light">
+
+      <div class="col-12 os-animation" data-animation="animate__animated animate__fadeInUp">
+        <h3 class="heading"><i
+          class="features-bshapeicon-styling heading fas fa-seedling text-success team-icon-padding"></i>
+          <span class="heading text-light">b</span><span
+            class="text-success heading">Shape</span> <span class="text-light heading">Team</span>
+        </h3>
+      </div>
+
+      <div class="container">
+        <div class="os-animation" data-animation="animate__animated animate__fadeInUp">
+          <div></div>
+          <owl-carousel-o [options]="customOptions">
+
+            <ng-container *ngFor="let slide of slidesData" class="owl-theme">
+              <ng-template class="slide" carouselSlide [id]="slide.id">
+                <div class="card">
+                  <img src="{{slide.img}}" alt=""
+                       class="card-img-top rounded-corners">
+                  <div class="card-body">
+                    <h4 class="font-weight-bold">{{slide.name}}</h4>
+                    <h5 class="text-color-mark">{{slide.role}}</h5>
+                    <p class="border-top border-bottom py-3 my-3">{{slide.mainRole}}</p>
+                    <ul class="social">
+                      <li><a href="{{slide.facebookLink}}}"><i class="fab fa-facebook-f"></i></a></li>
+                      <li><a href="{{slide.twitterLink}}}"><i class="fab fa-twitter"></i></a></li>
+                      <li><a href="{{slide.instagramLink}}}"><i class="fab fa-instagram"></i></a></li>
+                      <li><a href="{{slide.youtubeLink}}}"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                  </div>
+                </div> <!-- End Card -->
+              </ng-template>
+            </ng-container>
+
+          </owl-carousel-o>
+          <div></div>
+
+
+        </div> <!-- End Animation -->
+      </div><!-- End Container -->
+
+    </div> <!-- End Row -->
+
+    <div class="fixed-wrap">
+      <div class="fixed-light"></div>
+    </div>
+  </div>
+  <!-- End Fixed BG IMG Light -->
+
+</div>
+<!-- End Team Section -->
+
+
+<!-- Novelties Section -->
+
+<main id="novelties">
+
+  <div>
+    <div class="jumbotron mb-0 py-0">
+      <section class="py-5 novelties-roll">
+
+        <div class="container">
+          <div class="py-3 text-center">
+            <div class="os-animation" data-animation="animate__animated animate__fadeInUp">
+              <h3 class="heading pricingclass text-secondary">Novelties</h3>
+            </div>
+          </div>
+
+          <div class="row">
+
+
+            <div class="novelties-more-space col-md-6  os-animation" data-animation="animate__animated animate__fadeInLeft">
+              <div class="accordion" id='acc'>
+                <div class="card-novelties mb-4">
+                  <p class="novelties-first-paraf h-100 text-white text-center p-3 text-success">High Fat Schedule</p>
+                  <div class="ribbon-pro-novelties">BESTSELLER</div>
+                  <div class="novelties-img-box box-first">
+                    <div class="hero-shadow"></div>
+                  </div>
+
+                  <div data-toggle="collapse" data-target='#collapseOne' aria-expanded='true'
+                       aria-controls='collapseOne'>
+                    <div class="card-header text-center py-3"> Click me <i class="fas fa-angle-double-down ml-4"></i></div>
+                  </div>
+
+                  <div id="collapseOne" class="collapse" data-parent='#acc'>
+
+                    <div class="card-body px-5 py-4">
+                      <h3>Description:</h3>
+                      <p>Reduction diet based on good beneficial fats and unsaturated omega 3
+                        fatty acids, with medium amount of protein
+                        and low quantity of carbohydrates.</p>
+                      <h3 class="mt-5">For Who?</h3>
+                      <p>Thanks to low amount of carbohydrates High Fat Diet is directed to people
+                        with overweight. Unique
+                        seeding of macronutrients will also help people diagnosed with
+                        insulin-resistance. High Fat Diet is best for people who
+                        awaits huge progresses in short period of time.
+                      </p>
+                    </div>
+                    <div class="card-footer text-center">
+                      <button class="btn-sm btn-novelities btn  py-1 px-3">Choose</button>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="novelties-more-space col-md-6  os-animation" data-animation="animate__animated animate__fadeInRight">
+              <div class="accordion" id='acc2'>
+
+                <div class="card-novelties mb-4">
+                  <p class="novelties-first-paraf h-100 text-white text-center p-3 text-success">Bodybuilding Schedule</p>
+                  <div class="novelties-img-box box-second">
+                    <div class="hero-shadow"></div>
+                  </div>
+
+                  <div data-toggle="collapse" data-target='#collapseTwo' aria-expanded='true'
+                       aria-controls='collapseTwo'>
+                    <div class="card-header text-center py-3">Click me <i
+                      class="fas fa-angle-double-down ml-4"></i></div>
+                  </div>
+
+                  <div id="collapseTwo" class="collapse" data-parent='#acc2'>
+
+                    <div class="card-body px-5 py-4">
+                      <h3>Description:</h3>
+                      <p>Diet created for people with high daily demand of calories and proteins.
+                        Mixed variation of products with
+                        high amount of carbohydrates and wholesome proteins to help You achieve
+                        Your dreamed shape on the gym.</p>
+                      <h3 class="mt-5">For Who?</h3>
+                      <p>For professional bodybuilders and semi-professional athletes who
+                        dedicate their life to sport.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                      <button class="btn-novelities btn btn-sm py-1 px-3">Choose</button>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="novelties-more-space col-md-6 os-animation" data-animation="animate__animated animate__fadeInLeft">
+              <div class="accordion" id='acc3'>
+                <div class="card-novelties mb-4">
+                  <p class="novelties-first-paraf h-100 text-white text-center p-3 text-success">MMA Schedule</p>
+                  <div class="novelties-img-box box-third">
+                    <div class="hero-shadow"></div>
+                  </div>
+
+                  <div data-toggle="collapse" data-target='#collapseThree' aria-expanded='true'
+                       aria-controls='collapseThree'>
+                    <div class="card-header text-center py-3">Click me<i class="fas fa-angle-double-down ml-4"></i></div>
+                  </div>
+
+                  <div id="collapseThree" class="collapse" data-parent='#acc3'>
+
+                    <div class="card-body px-5 py-4">
+                      <h3>Description:</h3>
+                      <p>Diet with high amount of carbohydrates,
+                        wholesome protein and calcium from diary products to maintain very good
+                        regeneration after hard trainings.</p>
+                      <h3 class="mt-5">For Who?</h3>
+                      <p>MMA Players Diet is directed to people with
+                        a large amount of effort
+                        during the day, and people with
+                        tendency to injure to help them with proper
+                        regeneration.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                      <button class="btn-novelities btn btn-sm py-1 px-3">Choose</button>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="novelties-more-space col-md-6  os-animation" data-animation="animate__animated animate__fadeInRight">
+              <div class="accordion" id='acc4'>
+                <div class="card-novelties mb-4">
+                  <p class="novelties-first-paraf h-100 text-white text-center p-3 text-success">Programing Schedule</p>
+                  <div class="ribbon-pro-novelties-hot">HOT NOVELTY</div>
+                  <div class="novelties-img-box box-fourth">
+                    <div class="hero-shadow"></div>
+                  </div>
+
+                  <div data-toggle="collapse" data-target='#collapseFour' aria-expanded='true'
+                       aria-controls='collapseFour'>
+                    <div class="card-header text-center py-3">Click me <i
+                      class="fas fa-angle-double-down ml-4"></i></div>
+                  </div>
+
+                  <div id="collapseFour" class="collapse" data-parent='#acc4'>
+
+                    <div class="card-body px-5 py-4">
+                      <h3>Description:</h3>
+                      <p>Programing Schedule was constructed specially for people with very high
+                        brain load and usage. It contains monosaccharides, taurine and koffeine
+                        to help You with neuron transactions and refill Your brain with
+                        energy.</p>
+                      <h3 class="mt-5">For Who?</h3>
+                      <p>For corporation workers, developers, and other people from profession
+                        where high neuron
+                        stimulation is needed.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                      <button class="btn-novelities btn btn-sm py-1 px-3">Choose</button>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<!-- END Novelties Section -->
+
+
+<!--<footer>-->
+<footer>
+  <div id="contact" class="offset">
+
+    <div class="container-fluid footer px-0">
+      <div class="row outer">
+
+        <div class="container">
+          <div class="row py-3">
+
+            <div class="writetome col-md-5 px-5 pr-md-5">
+              <a class="bshapeicon movemedown"><i class="fas fa-seedling text-success"></i> <span
+                class="text-light">b</span><span class="text-success">Shape</span>
+              </a>
+              <p class="pthanks">Thank Your for visiting our website!
+                If You have any questions dont
+                forget to write to us!
+              </p>
+
+              <strong>Our Location:</strong>
+              <p class="plocation">Rynek Main Square<br>Kraków</p>
+              <strong>Contact Info:</strong>
+              <p class="pcontact">112 997 997<br>email@bShape.com</p>
+              <ul class="social pt-3">
+                <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-youtube-square"></i></a></li>
+              </ul>
+            </div> <!-- End Column -->
+
+            <div class="col-md-7 px-0 pl-md-3">
+              <h3>Contact Us</h3>
+
+              <form action="contact/contact.php" method="POST" id="contact-form">
+
+                <div class="messages"></div>
+                <div class="controls">
+
+                  <div class="form-group">
+                    <input type="text" id="form_name" class="form-control" name="name"
+                           required="required" placeholder="Enter your name and Surname.">
+                  </div>
+
+                  <div class="form-group">
+                    <input type="email" id="form_email" class="form-control" name="email"
+                           required="required" placeholder="Enter your email.">
+                  </div>
+
+                  <div class="form-group">
+                                    <textarea name="message" id="form_message" rows="4" class="form-control"
+                                              required="required" placeholder="Add your message."></textarea>
+                  </div>
+
+                  <div class="messagecolor">
+                    <input type="submit" class="btn btn-outline-light btn-lg rounded-4 os-animation"
+                           value="Send Message">
+                  </div>
+                </div> <!-- End Controls -->
+
+              </form> <!-- End Form -->
+
+            </div> <!-- End Row -->
+
+          </div> <!-- End Row -->
+        </div> <!-- End Container -->
+
+        <hr class="socket">
+        &copy; bShape. All rights reserved.
+
+      </div> <!-- End Row Outer -->
+    </div> <!-- End Container Fluid -->
+
+  </div>
+  <!-- End Contact Section -->
+</footer>
+<!--</footer>-->
+
+<!-- Script Source Files -->
+
+<!-- jQuery https://code.jquery.com/ -->
+<script src='https://code.jquery.com/jquery-3.3.1.js'nintegrity="sha256–2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="  crossorigin="anonymous">
+</script>
+<!-- Bootstrap JS https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+<!-- Plugins.js -->
+
+<script src="assets/js/JsPassword/bootstrap-show-password.js"></script>
+
+<script src="assets/js/JsPlugins/plugins.js"></script>
+<!-- Waypoints https://cdnjs.com/libraries/waypoints
+    https://github.com/imakewebthings/waypoints -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<!-- Font Awesome https://fontawesome.com/  https://use.fontawesome.com/releases/v5.13.1/js/all.js -->
+
+<!--<script src="https://use.fontawesome.com/releases/v5.13.1/js/all.js"></script>-->
+<!-- Lightbox Image Gallery https://cdnjs.com/libraries/lightbox2  https://lokeshdhakar.com/projects/lightbox2/ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<!-- Owl Carousel https://cdnjs.com/libraries/OwlCarousel2
+    http://owlcarousel2.github.io/OwlCarousel2/ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- jQuery CounterUp https://www.jsdelivr.com/package/npm/jquery.counterup
+    https://github.com/bfintal/Counter-Up2 -->
+<script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
+<!-- Bootstrap Form Validator https://cdnjs.com/libraries/1000hz-bootstrap-validator -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+
+<!-- End of Script Source Files -->
+<script>
+  $(document).click(function (event) {
+    var clickover = $(event.target);
+    var _opened = $(".navbar-collapse").hasClass("show");
+    if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+      $(".navbar-toggler").click();
+    }
+  });
+</script>
+<script>
+  console.log($('.btn-lg'))
+</script>
+<!--<app-jquery-scripts></app-jquery-scripts>-->
+</body>
+</html>
+
+<router-outlet></router-outlet>
