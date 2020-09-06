@@ -825,26 +825,28 @@ div .movemedown{
 /*============= TEAM SECTION FIXED BG IMG LIGHT =============*/
 
 /*--- Team Light Background Image --*/
-/*.fixed-light {*/
-/*  background: center/cover url('../assets/img/BGIMAGE/men-1245982_1920-HD.jpg');*/
-/*  position: fixed;*/
-/*  height: 100%;*/
-/*  width: 100%;*/
-/*  -webkit-transform: translateZ(0);*/
-/*  transform: translateZ(0);*/
-/*  will-change: transform;*/
-/*  z-index: -1;*/
-/*  top: 0;*/
-/*  left: 0;*/
-/*  display: table;*/
+/*
+.fixed-light {
+  background: center/cover url('../../assets/img/BGIMAGE/men-1245982_1920-HD.jpg');
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: table;
 
-/*}*/
+}
 
-/*.light {*/
-/*  background: rgba(0,0,0,.1);*/
-/*  padding: 5rem 0;*/
-/*  z-index: 1000;*/
-/*}*/
+.light {
+  background: rgba(0,0,0,.1);
+  padding: 5rem 0;
+  z-index: 1000;
+}
+*/
 
 .fixed-light {
   background-image: url('../../assets/img/BGIMAGE/men-1245982_1920-HD.jpg');
@@ -864,6 +866,7 @@ div .movemedown{
 
 .light {
   background-color: rgba(5, 0, 0, 0.6);
+  background-image: url('../../assets/img/BGIMAGE/men-1245982_1920-HD.jpg');
   padding: 5rem 0;
   z-index: 1000;
 }
